@@ -22,3 +22,5 @@ const tableName = dataTable.substring(13, 19);
 console.log(tableName);
 
 //2 questão
+const columns = dataTable.split('  ', 2);
+console.log(columns);
