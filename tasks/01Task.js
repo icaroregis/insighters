@@ -21,7 +21,7 @@ const dataTable =
 // const tableName = dataTable.substring(13, 19);
 // console.log(tableName);
 
-const regex = /(author)(.+[^()])/;
+const regex = /(author) \((.+)\)/;
 const result = regex.exec(dataTable);
 const tableName = result[1];
 console.log(tableName);

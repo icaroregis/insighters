@@ -90,7 +90,6 @@
 // \s: representa um espaço em branco
 // \S: representa um não espaço em branco
 // \n: representa uma quebra de linha
-// \t: representa um tab
 
 // grupo de caracteres
 
@@ -106,9 +105,9 @@
 
 // quantificadores
 
-// {n}
-// {n,}
-// {n,m}
+// {n} começa com valor fixo
+// {n,} no mínimo um valor
+// {n,m} no minimo e no máximo
 // ? (zero ou um)
 // * (zero ou mais)
 // + (um ou mais)
@@ -125,7 +124,7 @@
 
 let regexp = /(\w+)@(\w+)(\.\w{2,7}),/;
 
-let result = regexp.exec("tess@insighter.academy,matheus@linkapi.com");
+let result = regexp.exec('tess@insighter.academy,matheus@linkapi.com');
 
 console.log(result);
 // console.log(result[1]);
