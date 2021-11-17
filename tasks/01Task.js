@@ -18,9 +18,18 @@ const dataTable =
   'create table author (id number, name string, age number, city string, state string, country string)';
 
 //1 questão
-const tableName = dataTable.substring(13, 19);
+// const tableName = dataTable.substring(13, 19);
+// console.log(tableName);
+
+const regex = /(author)(.+[^()])/;
+const result = regex.exec(dataTable);
+const tableName = result[1];
 console.log(tableName);
 
 //2 questão
-const columns = dataTable.split(/\ /);
-console.log(columns);
+// const columns = dataTable.split(/\(.\)/);
+// console.log(columns);
+
+const columns = result[2];
+const resultColums = columns.split(',');
+console.log(resultColums);
