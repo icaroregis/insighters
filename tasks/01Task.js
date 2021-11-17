@@ -33,3 +33,5 @@ console.log(tableName);
 const columns = result[2];
 const resultColums = columns.split(',');
 console.log(resultColums);
+
+//3questão
