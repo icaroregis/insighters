@@ -11,6 +11,7 @@
 // 5. Dentro do objeto criado com nome da tabela, crie um array chamado **data**.
 // 6. Exiba o conteúdo do objeto **database** utilizando *JSON.stringify*
 
+//respostas
 const string =
   'create table author (id number, name string, age number, city string, state string, country string)';
 
