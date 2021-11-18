@@ -21,7 +21,7 @@ const dataTable =
 // const tableName = dataTable.substring(13, 19);
 // console.log(tableName);
 
-const regex = /(author) \((.+)\)/;
+const regex = /([a-z]+) \((.+)\)/;
 const result = regex.exec(dataTable);
 const tableName = result[1];
 console.log(tableName);
@@ -31,7 +31,7 @@ console.log(tableName);
 // console.log(columns);
 
 const columns = result[2];
-const resultColums = columns.split(',');
+const resultColums = columns.split(', ');
 console.log(resultColums);
 
 //3questão
