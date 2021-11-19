@@ -11,25 +11,40 @@
 // 5. Dentro do objeto criado com nome da tabela, crie um array chamado **data**.
 // 6. Exiba o conteúdo do objeto **database** utilizando *JSON.stringify*
 
-//respostasss
-const string =
+//for of array
+//for in para objeto
+
+//task01
+const dataTable =
   'create table author (id number, name string, age number, city string, state string, country string)';
+
+const regex = /([a-z]+) \((.+)\)/;
+const result = regex.exec(dataTable);
+const tableName = result[1];
+console.log(tableName);
+
+const columns = result[2];
+const resultColums = columns.split(', ');
+console.log(resultColums);
+
+//task02
+const transformarEmObject = Object.assign(
+  ...resultColums.map((column) => {
+    const object = column.split(' ');
+    let propriedade = object[0];
+    let valor = object[1];
+    return { [propriedade]: valor };
+  }),
+);
 
 let database = {
   tables: {
-    author: {
-      columns: {
-        id: 'number',
-        name: 'string',
-        age: 'number',
-        city: 'string',
-        state: 'string',
-        country: 'string',
-      },
+    [tableName]: {
+      columns: transformarEmObject,
       data: [],
     },
   },
 };
 
-let teste = JSON.stringify(database);
-console.log(teste);
+let transformarEmJson = JSON.stringify(database, undefined, 2);
+console.log(transformarEmJson);
