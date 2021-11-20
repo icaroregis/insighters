@@ -37,6 +37,15 @@ const transformarEmObject = Object.assign(
   }),
 );
 
+//ou
+// for (let resultColums of column) {
+//   resultColums.split(' ');
+//   let propriedade = object[0];
+//   let valor = object[1];
+
+//   database.tables[tableName].columns[propriedade] = valor;
+// }
+
 let database = {
   tables: {
     [tableName]: {
